@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Deferred Scripts for Performance -->
+    <script src="https://kit.fontawesome.com/7cb489ee6c.js" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+    <!-- Priority 3: Browser Favicon -->
+    <link rel="icon" type="image/png" href="Images/OGIcon.png">
+
+    <!-- Priority 1: Open Graph Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Danish Mahmood | Data Analyst Portfolio">
+    <meta property="og:description" content="Data Analyst specializing in SQL, Python, Power BI, and interactive dashboards. Explore my analytical projects and dashboards.">
+    <meta property="og:image" content="https://danishmahmood34.github.io/danishmahmood-portfolio/Images/OGIcon.png">
+    <meta property="og:url" content="https://danishmahmood34.github.io/danishmahmood-portfolio/">
+</head>
+
+<body oncontextmenu="return false;">
+<!-- Header Section -->
+<div id="header">
+    <div class="container">
+        <nav>
+            <div class="logo-container">
+                <img src="Images/newlogo.png" class="logo" alt="Danish Mahmood Logo">
+            </div>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#Certificate">Certificate</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="header-text-container">
+            <div class="hero-left">
+                <h1>Hello, I'm</h1>
+                <h2><span class="auto-input"></span></h2>
+                <div class="social-icon">
+                    <a href="https://www.linkedin.com/in/danish-mahmood-4b3b52178/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/danishmahmood34" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-right">
+                <div class="badge-wrapper">
+                    <img src="Images/profile.png" alt="Danish Mahmood" class="badge-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/Profile Picture  (Small).png" alt="Profile Picture" loading="lazy">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm Danish Mahmood, a Data Analyst transitioning from banking and customer operations into analytics, backed by hands-on project work in SQL, Python, and Power BI. I enjoy cleaning, modeling, and visualizing datasets to surface business insights that support better decision-making.
+                    <br><br>I primarily work with SQL (Joins, CTEs, Window Functions, Aggregations), Python (Pandas, Matplotlib, Seaborn), and Power BI (DAX, Power Query, Power Pivot), along with Advanced Excel. I'm comfortable turning raw, messy data into clear, decision-ready dashboards and reports.
+                    <br><br>My background in banking and customer service has strengthened my analytical and problem-solving skills:
+                        <ul>
+                            <br><br><li>Analyzed $1.20M in retail sales across 8,523 items in a Power BI dashboard tracking KPIs, categories, and outlet performance.</li>
+                            <li>Analyzed FY2022–FY2024 EV registration data using SQL, uncovering strong EV market expansion — 2-wheeler sales grew from 252,573 to 932,692 units.</li>
+                        </ul>
+                    <br><br>I'm actively seeking an entry-level to junior Data Analyst / Business Analyst role, and I'm continuously learning and exploring better ways to build impactful, data-driven solutions.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('technical_skills')">Technical Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="technical_skills">
+                    <ul>
+                        <li><span>SQL (MySQL)</span><br>Joins, CTEs, Window Functions, Aggregations, and analytical querying for business reporting.</li>
+                        <li><span>Power BI</span><br>DAX, Power Query, Power Pivot, data modeling, KPI reporting, and interactive dashboard development.</li>
+                        <li><span>Python</span><br>Data cleaning and exploratory analysis using Pandas, Matplotlib, and Seaborn.</li>
+                        <li><span>Advanced Excel</span><br>VLOOKUP, Pivot Tables, and data preparation for reporting and analysis.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Master of Commerce</span><br>University of Kalyani | Aug 2019 – Sep 2021 | 70%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<!-- Technical Skills Section -->
+<div id="Technical_Skill">
+    <div class="container">
+        <h1 class="Sub-title-skill">Technical Skills</h1>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3><i class="fa-solid fa-database"></i> Core Tools</h3>
+                <div class="badge-container">
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">PYTHON</span>
+                    <span class="skill-badge">POWER BI</span>
+                    <span class="skill-badge">EXCEL</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3><i class="fa-solid fa-diagram-project"></i> Data Modeling & ETL</h3>
+                <div class="badge-container">
+                    <span class="skill-badge">DAX</span>
+                    <span class="skill-badge">POWER QUERY</span>
+                    <span class="skill-badge">POWER PIVOT</span>
+                    <span class="skill-badge">DATA MODELING</span>
+                    <span class="skill-badge">ETL</span>
+                    <span class="skill-badge">DATA CLEANING</span>
+                    <span class="skill-badge">DATA VALIDATION</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3><i class="fa-solid fa-chart-column"></i> Reporting & Analytics </h3>
+                <div class="badge-container">
+                    <span class="skill-badge">KPI REPORTING</span>
+                    <span class="skill-badge">DATA VISUALIZATION</span>
+                    <span class="skill-badge">DASHBOARD AUTOMATION</span>
+                    <span class="skill-badge">TREND ANALYSIS</span>
+                    <span class="skill-badge">BUSINESS REPORTING</span>
+                    <span class="skill-badge">PROBLEM-SOLVING</span>
+                    <span class="skill-badge">ANALYTICAL THINKING</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="project-list">
+            <div class="project-1">
+                <img src="Images/ev_market.png" alt="AtliQ Motors EV Market Analysis" loading="lazy">
+                <div class="layer">
+                    <h3>AtliQ Motors EV Market Analysis | MySQL</h3>
+                    <p>Analyzed FY2022–FY2024 EV registration data using JOINs, CTEs, Window Functions, RANK(), LAG(), and CAGR to uncover market growth and manufacturer performance trends.</p>
+                    <a href="https://github.com/danishmahmood34/AtliQ-Motors-EV-Market-Analysis" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project-2">
+                <img src="Images/blinkit.png" alt="Blinkit Sales Analysis" loading="lazy">
+                <div class="layer">
+                    <h3>Blinkit Sales Analysis | Power BI</h3>
+                    <p>Built an interactive Power BI dashboard analyzing $1.20M in retail sales across 8,523 items, tracking KPIs by category, outlet type, location, and outlet size.</p>
+                    <a href="https://github.com/danishmahmood34/Blinkit-Sales-Analysis" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project-3">
+                <img src="Images/linkedin.png" alt="LinkedIn Jobs Analysis" loading="lazy">
+                <div class="layer">
+                    <h3>LinkedIn Jobs Analysis | Power BI</h3>
+                    <p>Analyzed the job market across locations, companies, sectors, and job titles to surface hiring trends and demand patterns.</p>
+                    <a href="https://github.com/danishmahmood34/LinkedIn-Jobs-Analysis" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project-4">
+                <img src="Images/imdb.png" alt="IMDb Movie Analysis" loading="lazy">
+                <div class="layer">
+                    <h3>IMDb Movie Analysis | Python, Pandas, Matplotlib, Seaborn</h3>
+                    <p>Performed exploratory analysis on 1,000 IMDb movies, cleaning raw data and examining relationships across ratings, revenue, genres, and yearly trends.</p>
+                    <a href="https://github.com/danishmahmood34/IMDb-Movie-Analysis" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/danishmahmood34?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn">See more</a>
+    </div>
+</div>
+
+<!-- Certificate Section -->
+<div id="Certificate">
+  <div class="container">
+    <h1 class="sub-title">Certificate</h1>
+    <div class="certificate-container">
+      <div class="cert-card">
+        <a href="Images/Accenture Certificate.jpeg" target="_blank">
+          <img src="Images/Accenture Certificate.jpeg" class="certificate-image" alt="Accenture Certificate" loading="lazy">
+        </a>
+        <p>Accenture (North America) — Data Analytics and Visualization</p>
+      </div>
+      <div class="cert-card">
+        <a href="Images/Tata Certificate.jpeg" target="_blank">
+          <img src="Images/Tata Certificate.jpeg" class="certificate-image" alt="Tata Certificate" loading="lazy">
+        </a>
+        <p>Tata — Data Visualization: Empowering Business with Effective Insights</p>
+      </div>
+      <div class="cert-card">
+        <a href="Images/Udemy Certificate.jpeg" target="_blank">
+          <img src="Images/Udemy Certificate.jpeg" class="certificate-image" alt="Udemy Certificate" loading="lazy">
+        </a>
+        <p>Udemy — Microsoft Power BI Desktop for Business Intelligence</p>
+      </div>
+      <div class="cert-card">
+        <a href="Images/TCS iON Certificate.jpeg" target="_blank">
+          <img src="Images/TCS iON Certificate.jpeg" class="certificate-image" alt="TCS iON Certificate" loading="lazy">
+        </a>
+        <p>TCS iON Career Edge — Young Professional</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Thank You Section -->
+<div id="thank-you">
+    <div class="container-thanks">
+        <h3 class="sub-title-1">Thank you</h3>
+        <div class="thanks-container"> 
+            <br><br>
+            <p><em>Thank you for visiting!</em><br>"It means a lot to me that you took the time to explore my portfolio. If you have any questions or would like to connect, feel free to reach out."<br><br></p>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i> danishmahmood34@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +91-8617248338</p>
+                <br><br>
+                <div class="Name_container">
+                    <h2>Danish Mahmood</h2>
+                    <p>Data Analyst</p> 
+                </div>       
+                <a href="Images/Danish_Mahmood_Resume.pdf" download="Danish Mahmood Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright ©️ Danish. <br> Made by : Danish Mahmood' Portfolio <i class="fa-solid fa-chart-line"></i></p>
+</div>
+
+</body>
+</html>
