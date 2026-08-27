@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Typed.js animation
     var typed = new Typed(".auto-input", {
-        strings: ["Danish Mahmood", "Aspiring Data Analyst", "SQL | Python | Power BI"],
+        strings: ["Danish Mahmood", "Aspiring Data Analyst", "Excel | SQL | Power BI"],
         typeSpeed: 100,
         backSpeed: 100,
         loop: true
