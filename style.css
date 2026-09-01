@@ -57,7 +57,7 @@ body {
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('Images/Background Image.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('background.avif');
     background-size: cover;
     background-position: center;
     position: relative;
